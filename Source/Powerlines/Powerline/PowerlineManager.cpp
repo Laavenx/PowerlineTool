@@ -78,7 +78,7 @@ void APowerlineManager::HideInstances(const TArray<int32>& InstancesToChange) co
 	FTransform WorldTransform;
 	WorldTransform.SetLocation(FVector(0, 0, -1000000));
 	WorldTransform.SetRotation(FRotator(0, 0, 0).Quaternion());
-	WorldTransform.SetScale3D(FVector(1.f, 1.f, 1.f));
+	WorldTransform.SetScale3D(FVector(0.f, 0.f, 0.f));
 	
 	for (const int32 InstanceToChange : InstancesToChange)
 	{
@@ -92,7 +92,7 @@ void APowerlineManager::RemoveInstances(const TArray<int32>& InstancesToRemove)
 	FTransform WorldTransform;
 	WorldTransform.SetLocation(FVector(0, 0, -1000000));
 	WorldTransform.SetRotation(FRotator(0, 0, 0).Quaternion());
-	WorldTransform.SetScale3D(FVector(1.f, 1.f, 1.f));
+	WorldTransform.SetScale3D(FVector(0.f, 0.f, 0.f));
 	
 	for (const int32 InstanceToChange : InstancesToRemove)
 	{
@@ -146,7 +146,7 @@ void APowerlineManager::ClearAllInstances() const
 	FTransform WorldTransform;
 	WorldTransform.SetLocation(FVector(0, 0, -1000000));
 	WorldTransform.SetRotation(FRotator(0, 0, 0).Quaternion());
-	WorldTransform.SetScale3D(FVector(1.f, 1.f, 1.f));
+	WorldTransform.SetScale3D(FVector(0.f, 0.f, 0.f));
 
 	int32 NumInstances = CableHism->GetInstanceCount();
 	CableHism->BatchUpdateInstancesTransform(0, CableHism->GetInstanceCount(), WorldTransform, true, true, true);
